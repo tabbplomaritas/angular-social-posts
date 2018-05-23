@@ -13,9 +13,9 @@ const postForm = {
   <p ng-click="$ctrl.closeForm();">XXXX</p>
     <h4>New Post</h4>
     <label>Title</label>
-    <input type="text" ng-model="$ctrl.newPost.title">
+    <input expand type="text" ng-model="$ctrl.newPost.title">
     <label>Thought</label>
-    <textarea ng-model="$ctrl.newPost.thought""></textarea>
+    <textarea expand ng-model="$ctrl.newPost.thought""></textarea>
     <button>Add</button>
   </form>
   `

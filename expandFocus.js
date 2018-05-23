@@ -1,18 +1,27 @@
 "use strict";
-{
 
-
-  function ExpandFocus(){
-
-
-
-
+  function expand(){
+    return{
+      restrict: "A",
+      link: function($scope, $element, $attrs){
+        $element.on("focus", () => {
+          $element.css("background-color", "lightpink");
+          // $element.css("height", "100px");
+        });
+        
+        $element.on("blur", () => {
+          $element.css("background-color", "initial");
+          $element.css("height", "initial");
+        });
+      }
+    }
+  }
 
   angular
-    .module("profile-module")
-    .directive("expandFocus", ExpandFocus);
-}
+    .module("app")
+    .directive("expand", expand);
 
-}
+
+
 
 
