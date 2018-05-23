@@ -7,17 +7,13 @@ const post = {
   },
 
   template:`
- <p>{{$ctrl.post.title}}</p>
+  <p>{{$ctrl.post.title}}</p>
     <div>
-    <p>{{$ctrl.post.body}}</p>
-    <p>X</p>
+      <p>{{$ctrl.post.body}}</p>
+      <p>X</p>
     </div>
     `
 }
-
-
-
-
 
 
 
