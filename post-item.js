@@ -1,24 +1,24 @@
-"use strict";{
+// "use strict";{
 
 
-const post = {
-  bindings: {
-    post: "<"
-  },
+// const post = {
+//   bindings: {
+//     post: "<"
+//   },
 
-  template:`
-  <p>{{$ctrl.post.title}}</p>
-    <div>
-      <p>{{$ctrl.post.body}}</p>
-      <p>X</p>
-    </div>
-    `
-}
+//   template:`
+//   <p>{{$ctrl.post.title}}</p>
+//     <div>
+//       <p>{{$ctrl.post.body}}</p>
+//       <p>X</p>
+//     </div>
+//     `
+// }
 
 
 
-  angular
-  .module("app")
-  .component("post", post);
+//   angular
+//   .module("app")
+//   .component("post", post);
 
-}
+// }

@@ -1,26 +1,25 @@
 "use strict";
 {
 
-  const postFeed = {
+  const posts = {
     bindings: {
-      list: "<"
+      post: "<"
     },
 
     template: `
-    <h2>{{item.title}}</h2>
-      <div>
-        <p>{{item.body}}</p>
-        <img src="">
-      </div>
+    <section class="blogPost">
+      <h2>{{$ctrl.post.title}}</h2>
+        <div class = "postBody">
+          <p>{{$ctrl.post.body}}</p>
+          <p>X</p>
+        </div>
+      </section>
       `
   };
 
 
-
-
-
 angular
   .module("app")
-  .component("postFeed", postFeed);
+  .component("posts", posts);
 
 }

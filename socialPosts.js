@@ -4,21 +4,22 @@
 console.log("social posts parent working");
 
 const social = {
-  //creating ng-repeat posts and new post button
 
-  //right now we are just trying to test to see if we can get anything at all working, much less get nested components to work. 
   template: `
-  <button ng-click="$ctrl.openForm();">Add New Blog</button>
-  <post ng-repeat="post in $ctrl.list" post="post"> </post>
-  `,
-  //need to add form to template above, like this... <post-form ng-show="$ctrl.formOpen" on-submit="$ctrl.onSubmit(newUser);"></post-form>
 
+  <h1>Angular.js Social Posts</h1>  
+  
+  <post-form add-post="$ctrl.addPost(newPost);"></post-form>
+
+  <section>
+    <posts ng-repeat="post in $ctrl.myPosts" post="post"> </posts>
+  </section>
+  `,
 
   controller: function () {
-    
     const vm = this;
     // our array of posts
-    vm.list = [
+    vm.myPosts = [
       {
         title: "My first blog", 
         body: "lorem blah blah blah blah blah "
@@ -32,7 +33,21 @@ const social = {
         body: "lorem blah blah blah blah blah "
       }
     ];
-    console.log(vm.list);
+    console.log(vm.myPosts);
+
+   
+
+    vm.addPost = (newPost) =>{
+     
+      vm.myPosts.push({
+        title: newPost.title,
+        thought: newPost.thought
+      })
+      console.log(newPost);
+
+    }
+    
+
   }
 }
 
