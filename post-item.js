@@ -1,15 +1,28 @@
 "use strict";{
 
 
-const postItem = {
-  test: "post-item"
+const post = {
+  bindings: {
+    post: "<"
+  },
+
+  template:`
+ <p>{{$ctrl.post.title}}</p>
+    <div>
+    <p>{{$ctrl.post.body}}</p>
+    <p>X</p>
+    </div>
+    `
 }
 
 
 
 
+
+
+
   angular
-  .module("profile-module")
-  .component("postItem", postItem);
+  .module("app")
+  .component("post", post);
 
 }

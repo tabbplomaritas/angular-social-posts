@@ -2,7 +2,7 @@
 
 
 const postForm = {
-  test: "test"
+
 }
 
 
@@ -10,7 +10,7 @@ const postForm = {
 
 
   angular
-  .module("profile-module")
+  .module("app")
   .component("postForm", postForm);
 
 }

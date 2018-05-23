@@ -20,7 +20,7 @@
 
 
 angular
-  .module("profile-module")
+  .module("app")
   .component("postFeed", postFeed);
 
 }
